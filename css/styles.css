@@ -1,9 +1,24 @@
 /* CUSTOM PROPS */
 :root {
-
+  --body-bg: #f2f2f2;
+  --main-font: "Montserrat", "Arial", sans-serif;
+  --main-heading-color: #6e728e;
+  --main-color: #6d72ed;
+  --extra-color: #ffffff;
+  --color-liner: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
+  --pricing-color: #4a4d60;
 }
 
+
 /* FONT-FACE  */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonst/Montserrat-Bold.woff2") format("woff2"),
+  url("../fonst/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 /* GLOBAL-STYLES  */
@@ -23,11 +38,12 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
-  color: #222;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  background-color: var(--body-bg);
+  color: var(--main-heading-color);
+  font-family: var(--main-font);
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 500;
   padding: 0;
   margin: 0;
 }
@@ -40,10 +56,10 @@ img {
 
 /* CONTAINER  */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -63,16 +79,4 @@ img {
 /* MAIN-CONTENT  */
 .main-content {
   flex-grow: 1;
-}
-
-
-/* RETINA-BG  */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
 }
