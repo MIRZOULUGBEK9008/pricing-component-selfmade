@@ -7,14 +7,15 @@
   --extra-color: #ffffff;
   --color-liner: linear-gradient(135deg, #a2a7f0 0%, #696edd 100%);
   --pricing-color: #4a4d60;
+  --border-color:  rgba(110, 114, 142, 0.25);
 }
 
 
 /* FONT-FACE  */
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonst/Montserrat-Bold.woff2") format("woff2"),
-  url("../fonst/Montserrat-Bold.woff") format("woff");
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+  url("/fonts/Montserrat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -43,9 +44,10 @@ body {
   font-family: var(--main-font);
   font-size: 15px;
   line-height: 28px;
-  font-weight: 500;
+  font-weight: bold;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 img {
@@ -76,7 +78,170 @@ img {
 }
 
 
+/* MAIN-LINK  */
+.learn-more-link {
+  display: inline-block;
+  min-width: 288px;
+  padding: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  line-height: normal;
+  letter-spacing: 1.39px;
+  background-image: var(--color-liner);
+  color: var(--extra-color);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: color 0.4s ease;
+}
+
+.learn-more-link:hover {
+  background-image: none;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.learn-more-link-pro {
+  background-image: none;
+  background-color: var(--extra-color);
+  color: var(--main-color);
+}
+
+.learn-more-link-pro:hover {
+  background-color: transparent;
+  color: var(--extra-color);
+  border-color: var(--extra-color);
+}
+
+
 /* MAIN-CONTENT  */
 .main-content {
   flex-grow: 1;
+}
+
+.main-content-wrapper {
+  position: relative;
+  padding-top: 71px;
+  padding-bottom: 103px;
+}
+
+.path {
+  position: absolute;
+}
+
+.path_one {
+  right: 0;
+  top: -50px;
+  transform: translateX(50%);
+  z-index: -1;
+}
+
+.path_two {
+  left: 0;
+  bottom: 0;
+  transform: translateX(-45%);
+  z-index: -1;
+}
+
+.main-heading {
+  margin: 0;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 32px;
+  line-height: normal;
+  color: var(--main-heading-color);
+}
+
+
+/* TOGGLE  */
+.toggle {
+  padding-bottom: 64px;
+}
+
+
+
+.pracing-cards-wrapper {
+}
+
+.pracing-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-list-item {
+  min-height: 453px;
+  width: 350px;
+  background-color: var(--extra-color);
+  border-radius: 10px 0px 0px 10px;
+}
+
+.pricing-list-item:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.pricing-list-item_two {
+  min-height: 501px;
+  padding-top: 24px;
+  border-radius: 10px;
+  background-image: var(--color-liner);
+  color: var(--extra-color);
+}
+
+.pracing-info-box-wrapper {
+  padding: 31px;
+}
+
+.type-of-pricing-heading {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.pricing::before {
+  margin-right: 8px;
+  font-size: 40px;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  content: "$";
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pricing-color);
+  font-size: 72px;
+  margin-bottom: 32px;
+}
+
+.pricing-pro {
+  color: var(--extra-color);
+}
+
+.type-of-oportunity {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.oportunity-info {
+  text-align: center;
+  padding: 12px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.oportunity-info:nth-child(2) {
+  border: none;
+}
+
+.oportunity-info-pro {
+  border-color: rgba(255, 255, 255, 0.25);
 }
