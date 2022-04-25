@@ -132,8 +132,8 @@ img {
 
 .path_one {
   right: 0;
-  top: -50px;
-  transform: translateX(50%);
+  top: 0;
+  transform: translateX(33%);
   z-index: -1;
 }
 
@@ -152,12 +152,55 @@ img {
   font-size: 32px;
   line-height: normal;
   color: var(--main-heading-color);
+  white-space: nowrap;
 }
 
 
 /* TOGGLE  */
-.toggle {
-  padding-bottom: 64px;
+.toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 64px;
+}
+
+.toggle-inner {
+  display: flex;
+}
+
+.pricing-input {
+  cursor: pointer;
+}
+
+.inner-slider {
+  display: flex;
+  min-width: 56px;
+  min-height: 32px;
+  padding: 4px;
+  background-image: var(--color-liner);
+  border-radius: 16px;
+}
+
+.slider-label {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--extra-color);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.slider-label-monthly {
+  transform: translateX(100%);
+}
+
+.input-wrapper {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.input-label {
+  color: rgba(110, 114, 142, 0.25);
+  cursor: pointer;
 }
 
 .pracing-list {

@@ -19,7 +19,21 @@
       <img class="path path_one" src="img/path-icon_one.svg" alt="">
       <img class="path path_two" src="img/path-icon_two.svg" alt="">
       <h1 class="main-heading">Our pricing</h1>
-      <div class="toggle"></div>
+
+      <!-- TOGGLE-WRAPPER  -->
+      <div class="toggle-wrapper">
+        <div class="toggle-inner">
+          <label class="input-label" for="annually">Annually</label>
+          <span class="input-wrapper">
+            <input class="pricing-input visually-hidden" type="radio" value="annually" name="pricing-mode" id="annually">
+            <input class="pricing-input visually-hidden" type="radio" value="monthly" name="pricing-mode" id="monthly">
+            <div class="inner-slider">
+              <span class="slider-label slider-label-monthly" for="monthly"></span>
+            </div>
+          </span>
+          <label class="input-label" for="monthly">Monthly</label>
+        </div>
+      </div>
 
       <!-- PRICING-CARD  -->
       <ul class="pracing-list">
