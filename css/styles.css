@@ -145,50 +145,71 @@ img {
 
 
 /* TOGGLE  */
-.toggle-wrapper {
+.input-toggle-wrapper {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 64px;
 }
 
-.toggle-inner {
-  display: flex;
+.input-toggle-annually:checked ~ div .toggle-slider {
+  margin-left: 0;
+  transition: margin 0.4s ease;
 }
 
-.pricing-input {
+.input-toggle-monthly:checked ~ div .toggle-slider {
+  margin-right: 0;
+  transition: margin 0.4s ease;
+}
+
+.input-label {
+  color: rgba(110, 114, 142, 0.5);
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 
-.inner-slider {
-  display: flex;
-  min-width: 56px;
-  min-height: 32px;
-  padding: 4px;
-  background-image: var(--color-liner);
-  border-radius: 16px;
+.input-label:hover{
+  color: rgba(110, 114, 142, 1);
 }
 
-.slider-label {
-  display: block;
+.input-label-annually,
+.input-label-monthly {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.input-toggle-annually:checked ~ .toggle-control .input-label-monthly,
+.input-toggle-monthly:checked ~ .toggle-control .input-label-annually {
+  z-index: 5;
+}
+
+.toggle-control {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  padding: 4px;
+  margin-right: 24px;
+  margin-left: 24px;
+  background-color: var(--main-color);
+  background-image: var(--color-liner);
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.toggle-control:hover {
+  opacity: 0.5;
+}
+
+.toggle-slider {
   width: 24px;
   height: 24px;
   background-color: var(--extra-color);
   border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.slider-label-monthly {
-  transform: translateX(100%);
-}
-
-.input-wrapper {
-  padding-right: 24px;
-  padding-left: 24px;
-}
-
-.input-label {
-  color: rgba(110, 114, 142, 0.25);
-  cursor: pointer;
+  margin-left: 24px;
 }
 
 .pracing-list {

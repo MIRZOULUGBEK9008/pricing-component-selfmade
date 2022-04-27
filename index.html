@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing Component</title>
+  <title>Pricing component</title>
 
   <!-- STYLES  -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- <link rel="stylesheet" href="css/css.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="css/css.min.css">
 </head>
 <body>
 
@@ -18,29 +18,38 @@
     <div class="container main-content-wrapper">
       <h1 class="main-heading">Our pricing</h1>
 
-      <!-- TOGGLE-WRAPPER  -->
-      <div class="toggle-wrapper">
-        <div class="toggle-inner">
-          <label class="input-label" for="annually">Annually</label>
-          <span class="input-wrapper">
-            <input class="pricing-input visually-hidden" type="radio" value="annually" name="pricing-mode" id="annually">
-            <input class="pricing-input visually-hidden" type="radio" value="monthly" name="pricing-mode" id="monthly">
-            <div class="inner-slider">
-              <span class="slider-label slider-label-monthly" for="monthly"></span>
-            </div>
-          </span>
-          <label class="input-label" for="monthly">Monthly</label>
+      <!-- TOGGLE  -->
+      <form action="https://echo.htmlacademy.ru/" method="GET">
+
+        <!-- INPUT-TOGGLE  -->
+        <div class="input-toggle-wrapper">
+          <input class="input-toggle-annually visually-hidden" type="radio" id="annually-label" name="pricing-mode" value="annually">
+          <input class="input-toggle-monthly visually-hidden" type="radio" id="monthly-label" name="pricing-mode" value="monthly" checked>
+          <label class="input-label" for="annually-label">Annually</label>
+
+          <!-- SLIDER-TOGGLE  -->
+          <div class="toggle-control">
+
+            <div class="toggle-slider"></div>
+            <label class="input-label-annually" for="annually-label"></label>
+            <label class="input-label-monthly" for="monthly-label"></label>
+          </div>
+
+          <label class="input-label" for="monthly-label">Monthly</label>
         </div>
-      </div>
+
+
+      </form>
 
       <!-- PRICING-CARD  -->
-      <div class="pracing-list">
+      <section class="pracing-list">
+        <h2 class="visually-hidden">Price mode</h2>
 
         <!-- BASIC  -->
-        <section class="pricing-list-item">
+        <section class="pricing-list-item" data-payment-annually="199.99" data-payment-monthly="19.99">
           <div class="pracing-info-box-wrapper">
             <h3 class="type-of-pricing-heading">Basic</h3>
-            <span class="pricing" id="basic">19.99</span>
+            <span class="pricing">19.99</span>
             <ul class="type-of-oportunity">
               <li class="oportunity-info">500 GB Storage</li>
               <li class="oportunity-info">2 Users Allowed</li>
@@ -51,10 +60,10 @@
         </section>
 
         <!-- PRO  -->
-        <section class="pricing-list-item pricing-list-item_two">
+        <section class="pricing-list-item pricing-list-item_two" data-payment-annually="249.99" data-payment-monthly="24.99">
           <div class="pracing-info-box-wrapper">
             <h3 class="type-of-pricing-heading">Professional</h3>
-            <span class="pricing pricing-pro" id="pro">24.99</span>
+            <span class="pricing pricing-pro">24.99</span>
             <ul class="type-of-oportunity type-of-oportunity-pro">
               <li class="oportunity-info oportunity-info-pro">1 TB Storage</li>
               <li class="oportunity-info oportunity-info-pro">5 Users Allowed</li>
@@ -65,10 +74,10 @@
         </section>
 
         <!-- MASTER  -->
-        <section class="pricing-list-item">
+        <section class="pricing-list-item" data-payment-annually="399.99" data-payment-monthly="39.99">
           <div class="pracing-info-box-wrapper">
             <h3 class="type-of-pricing-heading">Master</h3>
-            <span class="pricing" id="master">39.99</span>
+            <span class="pricing">39.99</span>
             <ul class="type-of-oportunity">
               <li class="oportunity-info">2 TB Storage</li>
               <li class="oportunity-info">10 Users Allowed</li>
@@ -77,7 +86,7 @@
             <a class="learn-more-link" href="#" target="_blank">Learn more</a>
           </div>
         </section>
-      </div>
+      </section>
     </div>
   </main>
 
