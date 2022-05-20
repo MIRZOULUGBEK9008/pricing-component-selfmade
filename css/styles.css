@@ -85,7 +85,8 @@ img {
 /* MAIN-LINK  */
 .learn-more-link {
   display: inline-block;
-  min-width: 288px;
+  /* min-width: 288px; */
+  width: 100%;
   padding: 14px;
   text-decoration: none;
   text-transform: uppercase;
@@ -218,12 +219,12 @@ img {
 }
 
 .pricing-list-item {
-  padding: 30px;
+  padding: 31px;
   width: 350px;
   background-color: var(--extra-color);
 }
 
-.pricing-list-item:first-child {
+.pricing-list-item {
   border-radius: 10px 0px 0px 10px;
 }
 
@@ -262,6 +263,7 @@ img {
   justify-content: center;
   color: var(--pricing-color);
   font-size: 72px;
+  letter-spacing: -2.16px;
   margin-bottom: 32px;
 }
 
